@@ -24,3 +24,11 @@ export interface IProject {
   image: string;
   source_code_link: string;
 }
+
+export interface ITestimonial {
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  image: string;
+}

@@ -24,7 +24,7 @@ import {
   tripguide,
   threejs,
 } from "../assets";
-import { IExperience, IProject, IService } from "../types";
+import { IExperience, IProject, IService, ITestimonial } from "../types";
 
 export const navLinks = [
   {
@@ -170,7 +170,7 @@ const experiences: IExperience[] = [
   },
 ];
 
-const testimonials = [
+const testimonials: ITestimonial[] = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
