@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { IService } from "../types";
+import { SectionWrapper } from "../hoc";
 
 // Represents a card displaying a service.
 const ServiceCard: React.FC<{
@@ -68,4 +69,8 @@ const About = () => {
   );
 };
 
-export default About;
+// Wrap the `About` component with the `SectionWrapper` HOC, passing the component and the ID name
+const AboutSectionWrapper = SectionWrapper(About, "about");
+
+// Export the wrapped component as the default export
+export default AboutSectionWrapper;
