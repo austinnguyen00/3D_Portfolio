@@ -24,7 +24,7 @@ import {
   tripguide,
   threejs,
 } from "../assets";
-import { IExperience, IService } from "../types";
+import { IExperience, IProject, IService } from "../types";
 
 export const navLinks = [
   {
@@ -197,7 +197,7 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const projects: IProject[] = [
   {
     name: "Car Rent",
     description:

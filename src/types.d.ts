@@ -11,3 +11,16 @@ export interface IExperience {
   date: string;
   points: string[];
 }
+
+export interface ITag {
+  name: string;
+  color: string;
+}
+
+export interface IProject {
+  name: string;
+  description: string;
+  tags: ITag[];
+  image: string;
+  source_code_link: string;
+}
