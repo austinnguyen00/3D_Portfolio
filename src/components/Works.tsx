@@ -115,5 +115,5 @@ const Works = () => {
 };
 
 // Wrap the Works component with a section wrapper
-const WorksSectionWrapper = SectionWrapper(Works, "works");
+const WorksSectionWrapper = SectionWrapper(Works, "work");
 export default WorksSectionWrapper;
