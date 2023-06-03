@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import { IService } from "../types";
 
 export const navLinks = [
   {
@@ -40,21 +41,21 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const services: IService[] = [
   {
     title: "Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Frontend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Data Analyst",
     icon: creator,
   },
 ];
