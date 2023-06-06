@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 `}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-neutral-900`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Homepage link - scroll to the top of home page when clicked*/}

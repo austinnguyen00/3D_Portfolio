@@ -7,7 +7,7 @@ import { styles } from "../styles";
 // The Hero component represents the hero section of a webpage
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center ">
       {/* A container div for the content */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}

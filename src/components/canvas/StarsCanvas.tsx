@@ -56,7 +56,7 @@ const Stars = () => {
 // StarsCanvas component
 const StarsCanvas = () => {
   return (
-    <div className="w-full h-auto inset-0 z-[-1] fixed">
+    <div className="w-full h-auto inset-0 z-[-1] fixed bg-neutral-900">
       {/* Canvas component provides the Three.js rendering context */}
       <Canvas camera={{ position: [0, 0, 1] }}>
         {/* Suspense component handles loading states */}
