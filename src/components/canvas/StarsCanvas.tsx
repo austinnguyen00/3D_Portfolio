@@ -1,6 +1,7 @@
-import { useRef, Suspense } from "react";
+import { Suspense, useRef, useState } from "react";
+
+import { PointMaterial, Points, Preload } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.cjs";
 
 // Stars component
@@ -9,10 +10,12 @@ const Stars = () => {
   const ref = useRef<any>();
 
   // Generate a Float32Array of sphere positions using random.inSphere
-  const sphere = Float32Array.from(
-    random.inSphere(new Float32Array(5000), {
-      radius: 1.2,
-    }),
+  const [sphere] = useState(() =>
+    Float32Array.from(
+      random.inSphere(new Float32Array(3000), {
+        radius: 1.2,
+      }),
+    ),
   );
 
   // useFrame is a custom hook provided by @react-three/fiber to perform actions on each frame
@@ -35,7 +38,7 @@ const Stars = () => {
       {/* In this case, each vertex has three components (x, y, z) */}
       {/* This property is used for efficient memory allocation and rendering optimizations */}
       {/* It helps improve performance by skipping unnecessary data */}
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
         {/* The 'PointMaterial' component defines the appearance of each star */}
         {/* It determines the color, size, and other visual properties of the stars */}
         <PointMaterial
@@ -53,7 +56,7 @@ const Stars = () => {
 // StarsCanvas component
 const StarsCanvas = () => {
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
+    <div className="w-full h-auto inset-0 z-[-1] fixed">
       {/* Canvas component provides the Three.js rendering context */}
       <Canvas camera={{ position: [0, 0, 1] }}>
         {/* Suspense component handles loading states */}

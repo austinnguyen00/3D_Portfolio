@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { styles } from "../styles";
+
 import { ComputersCanvas } from ".";
+
+import { styles } from "../styles";
 
 // The Hero component represents the hero section of a webpage
 const Hero = () => {
