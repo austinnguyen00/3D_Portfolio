@@ -1,11 +1,14 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+
 import { motion } from "framer-motion";
-import { styles } from "../styles";
+import { Tilt } from "react-tilt";
+
+import { avatar } from "../assets";
 import { services } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-import { IService } from "../types";
 import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { IService } from "../types";
+import { fadeIn, textVariant } from "../utils/motion";
 
 // Represents a card displaying a service.
 const ServiceCard: React.FC<{
@@ -47,20 +50,39 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
-
-      {/* Description */}
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I am a software developer with 2 plus years of experience in the IT
-        domain passionate about developing products to solve problems. Possess
-        proficient skills in a wide range of standard and modern technologies
-        and a willingness to innovate and learn new skills.
-      </motion.p>
-
+      <div className="flex flex-col-reverse gap-5 items-center lg:flex-row lg:gap-20">
+        <div>
+          {/* Description */}
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-6 text-secondary text-[20px] max-w-3xl leading-[30px]"
+          >
+            Hi, my name is Duy Khiem Nguyen, but called me Austin. I am a web
+            developer, often doing both front-end and back-end, but more
+            specialize in front-end.
+          </motion.p>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-6 text-secondary text-[20px] max-w-3xl leading-[30px]"
+          >
+            I am also passionate about AI, Chess, League of Legends and Music. I
+            am always eager to learn new and trending technologies.
+          </motion.p>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-6 text-secondary text-[20px] max-w-3xl leading-[30px]"
+          >
+            I am from Vietnam and currently reside in Perth, Western Australia.
+          </motion.p>
+        </div>
+        <img
+          src={avatar}
+          alt="avatar"
+          className="lg:w-1/4 lg:h-1/4 w-2/5 h-2/5 mt-8 rounded-full border-gray-800 border-4"
+        />
+      </div>
       {/* Service Cards */}
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service: IService, index: number) => (
           <ServiceCard key={service.title} index={index} service={service} />
         ))}

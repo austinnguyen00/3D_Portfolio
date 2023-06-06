@@ -1,3 +1,4 @@
+import avatar from "./avatar.jpg";
 import backend from "./backend.png";
 import carrent from "./carrent.png";
 import close from "./close.svg";
@@ -29,6 +30,7 @@ import tripguide from "./tripguide.png";
 import web from "./web.png";
 
 export {
+  avatar,
   logo,
   backend,
   creator,

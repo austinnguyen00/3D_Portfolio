@@ -1,7 +1,6 @@
 import {
   backend,
   carrent,
-  creator,
   css,
   docker,
   figma,
@@ -48,16 +47,12 @@ const services: IService[] = [
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Frontend Developer",
     icon: mobile,
   },
   {
-    title: "Frontend Developer",
+    title: "Part-time Chess Player",
     icon: backend,
-  },
-  {
-    title: "Data Analyst",
-    icon: creator,
   },
 ];
 
