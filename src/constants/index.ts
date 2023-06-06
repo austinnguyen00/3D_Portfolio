@@ -206,9 +206,9 @@ const testimonials: ITestimonial[] = [
 
 const projects: IProject[] = [
   {
-    name: "Car Rent",
+    name: "WordfixerBot",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An AI language processing tool that can paraphrase, grammar check, summarize, and compare text.",
     tags: [
       {
         name: "react",
@@ -229,7 +229,7 @@ const projects: IProject[] = [
   {
     name: "Job IT",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A web application finding music tracks matching user's tastes with Spotify API by fetching data from Spotify API using Django on the backend.",
     tags: [
       {
         name: "react",
@@ -248,9 +248,30 @@ const projects: IProject[] = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "AusDask",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An analysis of commonly required skills for data occupations - Data Analyst, Data Engineer, and Data Scientist - at different seniority levels in Australia in 2022.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Chopen",
+    description:
+      "An exploratory data analysis (EDA) of different chess openings at different levels in rapid time format, find the highest win rate openings, and see their associated popularity.",
     tags: [
       {
         name: "nextjs",
